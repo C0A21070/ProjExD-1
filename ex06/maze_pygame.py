@@ -142,7 +142,7 @@ class Bear(Bird):
         scr.sfc.blit(self.sfc,self.rct)
 
     def search_left(self, maze_map):#重兼追加 左手法実装
-        dif = ((0,1), (1,0), (0,-1),(-1,0))
+        dif = ((1,0), (0,1), (-1,0),(0,-1))
         for i in range(4):
             dir = (self.now_dir+3+i)%4
             x = (self.rct.centerx//int(self.tile_size) + dif[dir][0])
@@ -259,5 +259,3 @@ if __name__ == '__main__':
     main()
     pg.quit()
     sys.exit()
-
-
